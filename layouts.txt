@@ -6,6 +6,25 @@ FULL EXAMPLE
 ============
 Refer to the "template-example.html" file.
 
+ACCCOUNT INFORMATION
+====================
+The account information is used to display the information about the account of the page.
+
+Liquid Variables:
+-----------------
+{{account}}
+{{account.name}} - The name of the page
+{{account.settings.logo}} - The logo of the page (200x200 px)
+{{account.settings.logo_alt}} - The original full-size uploaded logo of the page
+{{account.settings.logo_original}} - Alias for {{account.settings.logo_alt}}
+{{account.settings.logo_small}} - Alias for {{account.settings.logo}}
+{{account.seettings.tagline}} - The short description of the page
+{{account.cname}} - the CNAME of the page, example "baansmile"
+{{account.email}} - The Email address of the account
+
+You can use this to put the above information anywhere in your template.
+
+
 SINGLE POST
 ===========
 This is generally for a blog post, video, or a single post with a collection of posts.
