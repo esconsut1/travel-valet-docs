@@ -1,83 +1,62 @@
 LAYOUTS
 =======
+Templates are contained in a single file. This single file contains html, css, javascript and liquid markup for single posts with or without collections and list of posts.
 
-Templates are contained in a single file.
-You can 
+FULL EXAMPLE
+============
+Refer to the "template-example.html" file.
 
+SINGLE POST
+===========
+This is generally for a blog post, video, or a single post with a collection of posts.
 
-THE CANONICAL TEMPLATE EXAMPLE
-==============================
+Liquid Variables: 
+-----------------
+{{post}}
+{{post.title}} - the title of the post
+{{post.cover_image}} - the cover image for the post
+{{post.cover_video}} - the video for the post
+{{post.description}} - the description of the post (html))
+{{post.url}} -- the url of the post
 
-<html>
-  <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- basic meta information -->
-    <title>{{account.title}}</title>
-    <meta name="description" content="{{account.settings.tagline}}">
-    
-    <!-- automatically generated tailwind css for just this template -->
-    <link rel="stylesheet" url="/{{account.cname}}/tailwind.min.css">
-    
-    <!-- og:xxx data for social embedding -->
-		<meta property="og:title" content="{{og.title}}">
-		<meta property="og:site_name" content="{{account.name}}">
-		<meta property="og:type" content="{{og.type}}">
-		<meta property="og:url" content="{{og.url}}">
-		<meta property="og:image" content="{{og.image}}">    
-    
-    <!-- favicon -->
-    <link rel="icon" href="{{account.settings.logo_small}}" type="image/x-icon">
-  </head>
-	
-	<body>
-		<!-- header -->
-		<header>
-			<a href="/{{account.cname}}" title="{{account.title}}">
-				<img src="{{account.settings.logo}}" alt="Logo">
-			</a>
-			<h4>{{account.name}}</h4>
-			<h5>{{account.settings.tagline}}</h5>
-		</header>
-		<!-- /header -->
-		
-		<!-- CTA (the call to action button for lead gen) -->
-		{% if cta_url %}
-			<a href="{{cta_url}}">{{cta_label}}</a>
-		{% endif %}
-		<!-- /CTA -->
-		
-		<!-- single post -->
-		{% if post %}
-			<h1>{{post.title}}</h1>
-			{% if post.cover_image %}<img src="{{post.cover_image}}" alt="{{post.cover_image}}" style="width: 100%;">{% endif %}
-			{% if post.description.size > 0 %}
-			<article>
-				{{post.description}}
-			</article>
-			{% endif %}
-			
-			<!-- maybe this post contains a collection of other posts, if so we display them -->
-			<!-- collection -->
-			{% if collection.size > 0 %}
-				{% for p in collection %}
-				<div>
-					<a href="{{p.url}}">
-						<h2>{{p.title}}
-					</a>
-				</div>
-				{% endfor %}
-			{% endif %}
-			<!-- /collection -->
-		{% endif %}
-		<!-- /single post -->
-		
-		
-		<!-- list of posts -->
-		
-		<!-- /list of posts -->
-		
-	</body>
-</html>
+If the {{post}} variable exists, you can format it like this:
+
+{% if post %}
+	<h1>{{post.title}}</h1>
+	<img src="{{post.cover_image}}">
+	<article>
+		{{post.description}}
+	</article>
+	{% if post.url.size > 0 %}
+	<a href="{{post.url}}">Read more...</a>
+	{% endif %}
+{% endif %}
+
+You can format this any way you like, with or without an image, description, link url, etc. 
+
+MULTIPLE POSTS
+==============
+This is generally for the home page. It contains a list of posts.
+You can click on a single post to go to its link, or to display that single post and its collection.
+
+Liquid Variables:
+-----------------
+{{posts}} - the list of posts
+
+And for each individual post in the above list
+{{post.title}} - thte title of a post
+{{post.url}} - the link of a post (will automatically resolve to a singel post or external link)
+{{post.cover_image}} -- the image of a post
+
+If the {{posts}} variable exists, you can format the list like this.
+
+{% if posts.size > 0 %}
+	{% for p in posts %}
+	<div>
+		<a href="{{p.url}}">
+			<img src="{{p.cover_image}}">
+			<h2>{{post.title}}</h2>
+		</a>
+	</div>
+	{% endif %}
+{% endif %}
