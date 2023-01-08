@@ -8,18 +8,16 @@
     <title>{{account.title}}</title>
     <meta name="description" content="{{account.settings.tagline}}">
     
-    <!-- automatically generated tailwind css for just this template -->
+    <!-- 
+			automatically generated tailwind css for just this template.
+ 			You can use any CSS framework, or your own custom CSS
+		-->
     <link rel="stylesheet" url="/{{account.cname}}/tailwind.min.css">
     
-    <!-- og:xxx data for social embedding -->
-		<meta property="og:title" content="{{og.title}}">
-		<meta property="og:site_name" content="{{account.name}}">
-		<meta property="og:type" content="{{og.type}}">
-		<meta property="og:url" content="{{og.url}}">
-		<meta property="og:image" content="{{og.image}}">    
-    
     <!-- favicon -->
-    <link rel="icon" href="{{account.settings.logo_small}}" type="image/x-icon">
+    <link rel="icon" href="{{account.settings.logo_small}}" type="image/x-icon">		
+		
+    <!-- og:xxx data for social embedding (automatically embedded) -->
   </head>
 	
 	<body>
@@ -55,7 +53,8 @@
 				{% for p in collection %}
 				<div>
 					<a href="{{p.url}}">
-						<h2>{{p.title}}
+						<img src="{{p.cover_image}}" alt="{{p.title}}" style="width: 100%;">
+						<h2>{{p.title}}</h2>
 					</a>
 				</div>
 				{% endfor %}
@@ -64,10 +63,32 @@
 		{% endif %}
 		<!-- /single post -->
 		
-		
+		<!-- this is the list of posts for the main page -->
 		<!-- list of posts -->
-		
+		{% if posts.size > 0 %}
+			{% for p in posts %}
+				<a href="{{p.url}}">
+					{% if p.cover_image %}<img src="{{p.cover_image}}" alt="{{p.title}}" style="width: 100%; display: block;">{% endif %}
+					<h2>{{p.title}}</h2>
+				</a>
+			{% endfor %}
+		{% endif %}
 		<!-- /list of posts -->
 		
+		<!-- email subscribe link (optional) -->
+		<div>
+			<a href="{{account.cname}}/subscribe">Subscribe</a>
+		</div>
+		<!-- /email subscribe link -->
+		
+		<!-- footer (optional) -->
+		<footer>
+			Your custom footer
+		</footer>
+		<!-- /footer -->
+		
+		<!-- autogen -->
+		<p>Another footer will be automatically generated in here</p>
+		<!-- /autogen -->
 	</body>
 </html>
