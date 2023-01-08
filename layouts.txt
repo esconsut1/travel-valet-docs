@@ -1,0 +1,35 @@
+LAYOUTS
+=======
+
+Templates are contained in a single file.
+You can 
+
+
+THE CANONICAL TEMPLATE EXAMPLE
+==============================
+
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- basic meta information -->
+    <title>{{account.title}}</title>
+    <meta name="description" content="{{account.settings.tagline}}">
+    
+    <!-- automatically generated tailwind css for just this template -->
+    <link rel="stylesheet" url="/{{account.cname}}/tailwind.min.css">
+    
+    <!-- og:xxx data for social embedding -->
+		<meta property="og:title" content="{{og.title}}">
+		<meta property="og:site_name" content="{{account.name}}">
+		<meta property="og:type" content="{{og.type}}">
+		<meta property="og:url" content="{{og.url}}">
+		<meta property="og:image" content="{{og.image}}">    
+    
+    <!-- favicon -->
+    <link rel="icon" href="{{account.settings.logo_small}}" type="image/x-icon">
+    
+  </head>
+</html>
