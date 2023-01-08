@@ -1,7 +1,8 @@
-LAYOUTS
-=======
+VARIABLES
+=========
 Templates are contained in a single file. This single file contains html, css, javascript and liquid markup for single posts with or without collections and list of posts.
 
+Here are all the liquid variables you need to make your template work.
 
 FULL EXAMPLE
 ============
@@ -48,7 +49,8 @@ Liquid Variables:
 {{post_cover_image_medium}} - Rectangle 800x450 (16:9 ratio)
 {{post.cover_video}} - the video for the post
 {{post.description}} - the description of the post (html))
-{{post.url}} -- the url of the post
+{{post.url}} - the url of the post
+{{post.content_type}} - "text" or "html"
 
 {{collection}} -- A list (collection) of posts that are children of the above post.
 ** The collection contains the same attributes/variables as in a single post.
@@ -127,6 +129,7 @@ If the {{cta_url}} variable exists, you can format your link like this:
 HELPER VARIABLES
 ================
 {{year}} - the current year
+{{full_url}} - example: "https://thetravelvalet.com/baansmile"
 {{white_label}} - the controlling organization for this template
 {{white_label.name}} - name of the white label organization. Default: "The Travel Valet"
 {{white_label.url}} - url of the white lable organization. Default: "https://www.thetravelvalet.com"
