@@ -1,0 +1,73 @@
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- basic meta information -->
+    <title>{{account.title}}</title>
+    <meta name="description" content="{{account.settings.tagline}}">
+    
+    <!-- automatically generated tailwind css for just this template -->
+    <link rel="stylesheet" url="/{{account.cname}}/tailwind.min.css">
+    
+    <!-- og:xxx data for social embedding -->
+		<meta property="og:title" content="{{og.title}}">
+		<meta property="og:site_name" content="{{account.name}}">
+		<meta property="og:type" content="{{og.type}}">
+		<meta property="og:url" content="{{og.url}}">
+		<meta property="og:image" content="{{og.image}}">    
+    
+    <!-- favicon -->
+    <link rel="icon" href="{{account.settings.logo_small}}" type="image/x-icon">
+  </head>
+	
+	<body>
+		<!-- header -->
+		<header>
+			<a href="/{{account.cname}}" title="{{account.title}}">
+				<img src="{{account.settings.logo}}" alt="Logo">
+			</a>
+			<h4>{{account.name}}</h4>
+			<h5>{{account.settings.tagline}}</h5>
+		</header>
+		<!-- /header -->
+		
+		<!-- CTA (the call to action button for lead gen) -->
+		{% if cta_url %}
+			<a href="{{cta_url}}">{{cta_label}}</a>
+		{% endif %}
+		<!-- /CTA -->
+		
+		<!-- single post -->
+		{% if post %}
+			<h1>{{post.title}}</h1>
+			{% if post.cover_image %}<img src="{{post.cover_image}}" alt="{{post.cover_image}}" style="width: 100%;">{% endif %}
+			{% if post.description.size > 0 %}
+			<article>
+				{{post.description}}
+			</article>
+			{% endif %}
+			
+			<!-- maybe this post contains a collection of other posts, if so we display them -->
+			<!-- collection -->
+			{% if collection.size > 0 %}
+				{% for p in collection %}
+				<div>
+					<a href="{{p.url}}">
+						<h2>{{p.title}}
+					</a>
+				</div>
+				{% endfor %}
+			{% endif %}
+			<!-- /collection -->
+		{% endif %}
+		<!-- /single post -->
+		
+		
+		<!-- list of posts -->
+		
+		<!-- /list of posts -->
+		
+	</body>
+</html>
