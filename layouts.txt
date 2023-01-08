@@ -2,9 +2,11 @@ LAYOUTS
 =======
 Templates are contained in a single file. This single file contains html, css, javascript and liquid markup for single posts with or without collections and list of posts.
 
+
 FULL EXAMPLE
 ============
 Refer to the "template-example.html" file.
+
 
 ACCCOUNT INFORMATION
 ====================
@@ -38,6 +40,9 @@ Liquid Variables:
 {{post.description}} - the description of the post (html))
 {{post.url}} -- the url of the post
 
+{{collection}} -- A list (collection) of posts that are children of the above post.
+** The collection contains the same attributes/variables as in a single post.
+
 If the {{post}} variable exists, you can format it like this:
 
 {% if post %}
@@ -49,9 +54,19 @@ If the {{post}} variable exists, you can format it like this:
 	{% if post.url.size > 0 %}
 	<a href="{{post.url}}">Read more...</a>
 	{% endif %}
+	
+	<!-- if there is a collection -->
+	{% if collection.size > 0 %}
+	<ul>
+		{% for c in collection %}
+		<li><a href="{{c.url}}">{{c.title}}</a></li>
+		{% endfor %}
+	</ul>
+	{% endif %}
 {% endif %}
 
 You can format this any way you like, with or without an image, description, link url, etc. 
+
 
 MULTIPLE POSTS
 ==============
@@ -78,4 +93,20 @@ If the {{posts}} variable exists, you can format the list like this.
 		</a>
 	</div>
 	{% endif %}
+{% endif %}
+
+
+CTA
+===
+The Call To Action (CTA) is the link that is used for the active lead collection page.
+
+Liquid Variables:
+-----------------
+{{cta_url}} - the URL for the CTA page
+{{cta_label}} - The label for the CTA Link or button
+
+If the {{cta_url}} variable exists, you can format your link like this:
+
+{% if ctr_url %}
+<a href="{{cta_url}}">{{cta_label}}</a>
 {% endif %}
