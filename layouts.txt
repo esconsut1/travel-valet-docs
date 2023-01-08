@@ -85,14 +85,14 @@ And for each individual post in the above list
 If the {{posts}} variable exists, you can format the list like this.
 
 {% if posts.size > 0 %}
-	{% for p in posts %}
-	<div>
-		<a href="{{p.url}}">
-			<img src="{{p.cover_image}}">
-			<h2>{{post.title}}</h2>
-		</a>
-	</div>
-	{% endif %}
+  {% for p in posts %}
+  <div>
+    <a href="{{p.url}}">
+      <img src="{{p.cover_image}}">
+      <h2>{{post.title}}</h2>
+    </a>
+  </div>
+  {% endif %}
 {% endif %}
 
 
