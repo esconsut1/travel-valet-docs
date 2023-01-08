@@ -118,3 +118,22 @@ If the {{cta_url}} variable exists, you can format your link like this:
 {% if ctr_url %}
   <a href="{{cta_url}}">{{cta_label}}</a>
 {% endif %}
+
+
+HELPER VARIABLES
+================
+{{year}} - the current year
+{{white_label}} - the controlling organization for this template
+{{white_label.name}} - name of the white label organization. Default: "The Travel Valet"
+{{white_label.url}} - url of the white lable organization. Default: "https://www.thetravelvalet.com"
+{{facebook}} - facebook url of the account
+{{instagram}} - instagram url of the account
+{{twitter}} - twitter url of the account
+{{youtube}} - youtube url of the account
+{{tiktok}} - tiktok url of the account
+{{phone}} - phone number of the account
+{{address}} - Google maps url of the address of the account
+{{website}} -- website url of the account
+{{email}} - email address of the account
+{{whatsapp}} - WhatsApp url of the account
+
