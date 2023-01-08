@@ -1,0 +1,21 @@
+OUTPUT FORMATS
+==============
+
+You can request data from a page in following formats:
+
+HTML
+====
+This is the default format. Example:
+https://thetravelvalet.com/baansmile
+
+JSON
+====
+Request all data used to generate a template in this form:
+https://thetravelvalet.com/baansmile.json
+
+RSS
+===
+Get an RSS feed of all the posts in the page:
+https://thetravelvalet.com/baansmile.rss
+
+The .rss and .json formats will be automaticall added into the header of the HTML templates.
