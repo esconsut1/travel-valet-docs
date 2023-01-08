@@ -132,8 +132,7 @@ HELPER VARIABLES
 {{youtube}} - youtube url of the account
 {{tiktok}} - tiktok url of the account
 {{phone}} - phone number of the account
-{{address}} - Google maps url of the address of the account
+{{address}} - address of the account
 {{website}} -- website url of the account
 {{email}} - email address of the account
 {{whatsapp}} - WhatsApp url of the account
-
