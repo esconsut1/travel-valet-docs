@@ -44,9 +44,9 @@ Liquid Variables:
 -----------------
 {{post}}
 {{post.title}} - the title of the post
-{{post.cover_image}} - the cover image for the post
+{{post.cover_image}} - the cover image for the post 900x600
 {{post.cover_image_thumb}} - Square image 600x600
-{{post_cover_image_medium}} - Rectangle 800x450 (16:9 ratio)
+{{post.cover_image_original}} - Full size image
 {{post.cover_video}} - the video for the post
 {{post.description}} - the description of the post (html))
 {{post.url}} - the url of the post
@@ -92,9 +92,9 @@ Liquid Variables:
 And for each individual post in the above list
 {{post.title}} - thte title of a post
 {{post.url}} - the link of a post (will automatically resolve to a singel post or external link)
-{{post.cover_image}} -- the image of a post
+{{post.cover_image}} - the cover image for the post 900x600
 {{post.cover_image_thumb}} - Square image 600x600
-{{post_cover_image_medium}} - Rectangle 800x450 (16:9 ratio)
+{{post_cover_image_original}} - Original full size image
 
 If the {{posts}} variable exists, you can format the list like this.
 
