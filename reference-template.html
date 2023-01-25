@@ -5,20 +5,46 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--
+      ==============================================
+      Welome to the Travel Valet Reference Template!
+      Please refer to the docs here:
+      https://github.com/esconsut1/travel-valet-docs
+
+      Your entire template is contained in this
+      single file. Please refer to the documentation 
+      above.
+      ==============================================
+    -->
+
     <!-- basic meta information -->
     <title>{{account.title}}</title>
     <meta name="description" content="{{account.settings.tagline}}">
 
+    <!-- TAILWIND CSS -->
+    <!-- SYSTEM WILL GENERATE MINIMIZED CSS. UNCOMMENT IN PRODUCTION -->
+    <!-- <link rel="stylesheet" url="/tailwind/##ZID##.css"> -->
+
+    <!-- FOR DEVELPMENT ONLY -- REMOVE WHEN COMPLETED DESIGNS -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!-- /TAILWIND CSS -->
+
     <!-- 
-			automatically generated tailwind css for just this template.
- 			You can use any CSS framework, or your own custom CSS
-		-->
-    <link rel="stylesheet" url="/{{account.cname}}/tailwind.min.css">
+      CUSTOM STYLESHEETS
+      You can include your custom CSS frameworks and custom styles here, instead of Tailwind.
+      Example:
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <style>
+        h1 {font-weight: bold;}
+      </style>
+    -->
 
     <!-- favicon -->
 		<link rel="icon" href="{{account.settings.logo_small}}" type="image/x-icon">		
 
-    <!-- og:xxx data for social embedding (automatically embedded) -->
+    <!-- og:xxx data for social embedding (automatically embedded) DO NOT ADD OGDATA -->
+
   </head>
 	
 	<body>
@@ -34,7 +60,9 @@
 		
 		<!-- CTA (the call to action button for lead gen) -->
 		{% if cta_url %}
+    <p>
 			<a href="{{cta_url}}">{{cta_label}}</a>
+    </p>
 		{% endif %}
 		<!-- /CTA -->
 		
@@ -64,8 +92,7 @@
 		{% endif %}
 		<!-- /single post -->
 		
-		<!-- this is the list of posts for the main page -->
-		<!-- list of posts -->
+		<!-- MAIN PAGE this is the list of posts for the main page -->
 		{% if posts.size > 0 %}
 			{% for p in posts %}
 				<a href="{{p.url}}">
@@ -84,12 +111,12 @@
 		
 		<!-- footer (optional) -->
 		<footer>
-			Your custom footer
+			<p>Your custom footer</p>
 		</footer>
 		<!-- /footer -->
 		
 		<!-- autogen -->
-		<p>Another footer will be automatically generated in here</p>
+		<p>Another whitelabel footer will be automatically generated in here</p>
 		<!-- /autogen -->
 	</body>
-</html>
+</html
