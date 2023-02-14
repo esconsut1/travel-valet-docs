@@ -125,6 +125,25 @@ If the {{cta_url}} variable exists, you can format your link like this:
   <a href="{{cta_url}}">{{cta_label}}</a>
 {% endif %}
 
+ABOUT US
+========
+You can create a button for "about us" if this variable exists
+{{account.about}}
+
+Example:
+{% if account.about %}
+<a href="{{account.about}}">About Ua</a>
+{% endif %}
+
+SUBSCRIBE
+=========
+To subscribe to the mailing list, this variable will contain the subscribe URL
+{{subscribe}}
+
+{% if subscribe %}
+<a href="{{subscribe}}">Join our Mailing List</a>
+{% endif %}
+
 
 HELPER VARIABLES
 ================
