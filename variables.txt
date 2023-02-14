@@ -121,7 +121,7 @@ Liquid Variables:
 
 If the {{cta_url}} variable exists, you can format your link like this:
 
-{% if ctr_url %}
+{% if cta_url %}
   <a href="{{cta_url}}">{{cta_label}}</a>
 {% endif %}
 
