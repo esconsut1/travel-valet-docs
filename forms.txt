@@ -48,7 +48,7 @@ Example Form
 ------------
 
 <form method="POST" action="https://thetravelvalet.com/api/generate">
-  <input type="hidden" name="cname" value="baansmile">
+  <input type="hidden" name="username" value="baansmile">
   <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
   <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
   <input type="hidden" name="style" value="descriptive">
