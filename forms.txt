@@ -24,6 +24,7 @@ GENERATION
 * recipe
 * [recipe inputs]
 * email - recipient email
+* name - recipient name (optional)
 
 Recipes
 -------
