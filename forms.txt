@@ -1,0 +1,29 @@
+EMBEDDABLE FORMS
+================
+
+Forms allow anyone to send the output of a recipe to someone else.
+
+These forms can be embedded on any website.
+
+FORM ACTION:
+https://thetravelvalet.com/api
+
+METHOD:
+post
+
+VARIABLES:
+* username - username of your travel valet account 
+* return_url - where to go when completed
+* failure_url = where to go when failed
+
+IF NO USERNAME
+* agency_name
+* agency_email
+
+GENERATION
+* recipe
+* [recipe inputs]
+* email - recipient email
+
+Recipes
+-------
