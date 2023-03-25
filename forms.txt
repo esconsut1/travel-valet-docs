@@ -6,7 +6,7 @@ Forms allow anyone to send the output of a recipe to someone else.
 These forms can be embedded on any website.
 
 FORM ACTION:
-https://thetravelvalet.com/api
+https://thetravelvalet.com/api/generate
 
 METHOD:
 post
@@ -28,32 +28,39 @@ GENERATION
 Recipes
 -------
 blog - Travel Blog, Fields: [place,subject]
-
 briefing - Travel Briefing, Fields: [place,style]
-
 culture - Culture Briefing, Fields: [place]
-
 food - Food Guide, Fields: [place,food_type]
-
 holidays - Holidays & Events, Fields: [place,time]
-
 itinerary - Travel Itinerary, Fields: [place,days]
-
 language - Language Primer, Fields: [place]
-
 laws - Local Law Guide, Fields: [place]
-
 packing - Packing List, Fields: [place]
-
 question - Answers, Fields: [place,question]
-
 social - Social media Posts, Fields: [place,media_type,media_style,subject]
-
 supplier - Supplier Blog, Fields: [place,supplier,subject]
-
 todo - Things to do, Fields: [place,interests,style]
-
 transportation - Transportation Guide, Fields: [place]
-
 visas - Entry Requirements, Fields: [place]
 
+Example Form
+------------
+
+<form method="POST" action="https://thetravelvalet.com/api/generate">
+  <input type="hidden" name="cname" value="baansmile">
+  <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
+  <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
+  <input type="hidden" name="style" value="descriptive">
+  
+  <h1>Get a travel Briefing</h1>
+  <label>Where are you going?</label>
+  <input type="text" name="place" placeholder="Miami, Florida">
+  
+  <label>My Email</label>
+  <input type="email" name="email">
+  
+  <label>My Name</label>
+  <input type="text" name="name">
+  
+  <button type="submit">Send My Travel Briefing</button>
+</form>
