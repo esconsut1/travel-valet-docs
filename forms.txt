@@ -42,15 +42,15 @@ visas - Entry Requirements, Fields: [place]
 
 Parameters for recipes
 ----------------------
-place - A place name, eg: "Bangkok, Thailand" - Cities are better then countries
-subject - About a thing, person, place, eg: "Street Dogs of Bangkok" or "Vegan Food in Bangkok"
-style - (optional) - The style in which to write the output. eg: "narrative", "poetic", etc.
-time - Time of year. Example: "March", "Spring", "Winter", "rainy season"
-days - Number of days, example: "7"
-media_type - Where the content will be posted: "facebook", "isntagram", "twitter"
-media_style - What style: "Clickbait", "Surprising facts", "Boring"
-supplier - Name of a travel supplier, example: "Carnival Cruises", "Collette Vacations", "Sandals Hotels"
-interests - What kind of interests example: "hiking, snorkeling, swimming" (can be comma separated)
+place - A place name, eg: "Bangkok, Thailand" - Cities are better then countries, default: "Bangkok, Thailand"
+subject - About a thing, person, place, eg: "Street Dogs of Bangkok" or "Vegan Food in Bangkok", default: "People or Food or Culture"
+style - (optional) - The style in which to write the output. eg: "narrative", "poetic", etc. default: "1950's Travel Magazine"
+time - Time of year. Example: "March", "Spring", "Winter", "rainy season", default: "The next 3 months"
+days - Number of days, example: "7", default: "7"
+media_type - Where the content will be posted: "facebook", "isntagram", "twitter", default: "instagram"
+media_style - What style: "Clickbait", "Surprising facts", "Boring", default: "Surprising Facts"
+supplier - Name of a travel supplier, example: "Carnival Cruises", "Collette Vacations", "Sandals Hotels", default: "Carnival Cruises"
+interests - What kind of interests example: "hiking, snorkeling, swimming" (can be comma separated), default: "exploring, dining, nightlife"
 
 Notes
 -----
@@ -58,9 +58,30 @@ You do not have to make the user input anything.
 You can put almost everything statically in hidden fields.
 The user just has to enter their name and email address.
 
-Example Form
-------------
+Example Form - Generic
+----------------------
 
+<form method="POST" action="https://thetravelvalet.com/api/generate">
+  <input type="hidden" name="username" value="baansmile">
+  <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
+  <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
+  <input type="hidden" name="style" value="descriptive">
+  
+  <h1>Get a travel Briefing</h1>
+  <label>Where are you going?</label>
+  <input type="text" name="place" placeholder="Miami, Florida">
+  
+  <label>My Email</label>
+  <input type="email" name="email">
+  
+  <label>My Name</label>
+  <input type="text" name="name">
+  
+  <button type="submit">Send My Travel Briefing</button>
+</form>
+
+Example Form - Specific
+-----------------------
 <form method="POST" action="https://thetravelvalet.com/api/generate">
   <input type="hidden" name="username" value="baansmile">
   <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
