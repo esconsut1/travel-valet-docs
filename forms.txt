@@ -40,6 +40,24 @@ todo - Things to do, Fields: [place,interests,style]
 transportation - Transportation Guide, Fields: [place]
 visas - Entry Requirements, Fields: [place]
 
+Parameters for recipes
+----------------------
+place - A place name, eg: "Bangkok, Thailand" - Cities are better then countries
+subject - About a thing, person, place, eg: "Street Dogs of Bangkok" or "Vegan Food in Bangkok"
+style - (optional) - The style in which to write the output. eg: "narrative", "poetic", etc.
+time - Time of year. Example: "March", "Spring", "Winter", "rainy season"
+days - Number of days, example: "7"
+media_type - Where the content will be posted: "facebook", "isntagram", "twitter"
+media_style - What style: "Clickbait", "Surprising facts", "Boring"
+supplier - Name of a travel supplier, example: "Carnival Cruises", "Collette Vacations", "Sandals Hotels"
+interests - What kind of interests example: "hiking, snorkeling, swimming" (can be comma separated)
+
+Notes
+-----
+You do not have to make the user input anything.
+You can put almost everything statically in hidden fields.
+The user just has to enter their name and email address.
+
 Example Form
 ------------
 
