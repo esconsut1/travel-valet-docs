@@ -22,6 +22,10 @@ GENERATION
 * email - recipient email
 * name - recipient name (optional)
 
+CALL TO ACTION
+* cta_url - url to go to on a CTA button (optional)
+* cta_label - label for the button (optional)
+
 Recipes
 -------
 blog - Travel Blog, Fields: [place,subject]
