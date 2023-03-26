@@ -16,33 +16,64 @@ VARIABLES:
 * return_url - where to go when completed
 * failure_url = where to go when failed
 
-GENERATION
+GENERATION VARIABLES:
 * recipe
 * [recipe inputs]
+
+RECIPIENT VARIABLES:
 * email - recipient email
 * name - recipient name (optional)
 
-CALL TO ACTION
+CALL TO ACTION VARIABLES:
 * cta_url - url to go to on a CTA button (optional)
 * cta_label - label for the button (optional)
 
 Recipes
 -------
-blog - Travel Blog, Fields: [place,subject]
-briefing - Travel Briefing, Fields: [place,style]
-culture - Culture Briefing, Fields: [place]
-food - Food Guide, Fields: [place,food_type]
-holidays - Holidays & Events, Fields: [place,time]
-itinerary - Travel Itinerary, Fields: [place,days]
-language - Language Primer, Fields: [place]
-laws - Local Law Guide, Fields: [place]
-packing - Packing List, Fields: [place]
-question - Answers, Fields: [place,question]
-social - Social media Posts, Fields: [place,media_type,media_style,subject]
-supplier - Supplier Blog, Fields: [place,supplier,subject]
-todo - Things to do, Fields: [place,interests,style]
-transportation - Transportation Guide, Fields: [place]
-visas - Entry Requirements, Fields: [place]
+blog - Travel Blog, 
+Fields: [place,subject]
+
+briefing - Travel Briefing, 
+Fields: [place,style]
+
+culture - Culture Briefing, 
+Fields: [place]
+
+food - Food Guide, 
+Fields: [place,food_type]
+
+holidays - Holidays & Events, 
+Fields: [place,time]
+
+itinerary - Travel Itinerary, 
+Fields: [place,days]
+
+language - Language Primer, 
+Fields: [place]
+
+laws - Local Law Guide, 
+Fields: [place]
+
+packing - Packing List, 
+Fields: [place]
+
+question - Answers, Fields: 
+[place,question]
+
+social - Social media Posts, 
+Fields: [place,media_type,media_style,subject]
+
+supplier - Supplier Blog, Fields: 
+[place,supplier,subject]
+
+todo - Things to do, 
+Fields: [place,interests,style]
+
+transportation - Transportation Guide, 
+Fields: [place]
+
+visas - Entry Requirements, 
+Fields: [place]
 
 Parameters for recipes
 ----------------------
