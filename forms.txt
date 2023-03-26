@@ -12,13 +12,9 @@ METHOD:
 post
 
 VARIABLES:
-* username - username of your travel valet account 
+* username - username/cname of your travel valet account eg: "baansmile"
 * return_url - where to go when completed
 * failure_url = where to go when failed
-
-IF NO USERNAME
-* agency_name
-* agency_email
 
 GENERATION
 * recipe
