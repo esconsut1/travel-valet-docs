@@ -14,7 +14,8 @@ post
 VARIABLES:
 * username - username/cname of your travel valet account eg: "baansmile"
 * return_url - where to go when completed
-* failure_url = where to go when failed
+* failure_url - where to go when failed
+* callback - a function to callback if you submit the request via AJAX
 
 GENERATION VARIABLES:
 * recipe
@@ -115,16 +116,15 @@ Example Form - Travel Briefing
   <button type="submit">Send My Travel Briefing</button>
 </form>
 
-Example Form - Travel Blog - Comparison of 3 star esorts
---------------------------------------------------
+Example Form - Travel Blog - Comparison of 3 star resorts
+----------------------------------------------------------
 <form method="POST" action="https://thetravelvalet.com/api/generate">
   <input type="hidden" name="username" value="baansmile">
   <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
   <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
-  <input type="hidden" name="subject" value="compare the top five 3-star resorts">
-  <input type="hidden" name="recipe" value="blog">
+  <input type="hidden" name="recipe" value="visas">
   
-  <h1>Get a comparison of the Top 5 3-Star Resorts for your next trip</h1>
+  <h1>Get Entry Requirments</h1>
   <label>Where are you going?</label>
   <input type="text" name="place" placeholder="Miami, Florida">
   
@@ -134,10 +134,10 @@ Example Form - Travel Blog - Comparison of 3 star esorts
   <label>My Name</label>
   <input type="text" name="name">
   
-  <button type="submit">Send my Comparison</button>
+  <button type="submit">Send me the Comparisons</button>
 </form>
 
-Example Form - Comparison of resorts
+Example Form - Entry Requirements
 ------------------------------------
 <form method="POST" action="https://thetravelvalet.com/api/generate">
   <input type="hidden" name="username" value="baansmile">
@@ -155,6 +155,6 @@ Example Form - Comparison of resorts
   <label>My Name</label>
   <input type="text" name="name">
   
-  <button type="submit">Send My Travel Briefing</button>
+  <button type="submit">Send My Entry Requirements</button>
 </form>
 
