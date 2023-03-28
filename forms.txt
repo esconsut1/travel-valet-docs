@@ -15,7 +15,7 @@ VARIABLES:
 * username - username/cname of your travel valet account eg: "baansmile"
 * return_url - where to go when completed
 * failure_url - where to go when failed
-* callback - a function to callback if you submit the request via AJAX
+* TODO - callback - a function to callback if you submit the request via AJAX
 
 GENERATION VARIABLES:
 * recipe
@@ -150,6 +150,26 @@ Example Form - Entry Requirements
   <label>Where are you going?</label>
   <input type="text" name="place" placeholder="Miami, Florida">
   
+  <label>My Email</label>
+  <input type="email" name="email">
+  
+  <label>My Name</label>
+  <input type="text" name="name">
+  
+  <button type="submit">Send My Entry Requirements</button>
+</form>
+
+Example Form - Language Guide
+-----------------------------
+<form method="POST" action="https://thetravelvalet.com/api/generate">
+  <input type="hidden" name="username" value="baansmile">
+  <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
+  <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
+  <input type="hidden" name="recipe" value="language">
+  <!-- see we put the place as a hidden field -->
+  <input type="hidden" name="place" value="Thailand">
+  
+  <h1>Get a single language Guide for Thailand</h1>
   <label>My Email</label>
   <input type="email" name="email">
   
