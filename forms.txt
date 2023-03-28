@@ -123,9 +123,9 @@ Example Form - Travel Blog - Comparison of 3 star resorts
   <input type="hidden" name="return_url" value="https://baansmile.com/thanks">
   <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
   <input type="hidden" name="recipe" value="blog">
-  <input type="hidden" name="subject" value="compare the top 10 3-star resorts">
+  <input type="hidden" name="subject" value="Compare the top 10 3-star resorts">
   
-  <h1>Get Entry Requirments</h1>
+  <h1>Compare 3 Star Resorts</h1>
   <label>Where are you going?</label>
   <input type="text" name="place" placeholder="Miami, Florida">
   
@@ -146,7 +146,7 @@ Example Form - Entry Requirements
   <input type="hidden" name="failure_url" value="https://baansmile.com/failed">
   <input type="hidden" name="recipe" value="visas">
   
-  <h1>Get a travel Briefing</h1>
+  <h1>Get Entry Requirements</h1>
   <label>Where are you going?</label>
   <input type="text" name="place" placeholder="Miami, Florida">
   
